@@ -149,13 +149,27 @@ export default defineNuxtSchema({
       description: 'Footer configuration.',
       icon: 'i-mdi-page-layout-footer',
       fields: {
-        credits: field({
-          type: 'string',
-          title: 'Footer credits section',
-          description: 'Text to display as credits in the footer.',
-          icon: 'i-mdi-circle-edit-outline',
-          default: ''
-        }),
+        credits: group({
+          title: "Credits",
+          description: "Credits configuration.",
+          icon: "i-mdi-credit-card-outline",
+          fields: {
+            label: field({
+              type: "string",
+              title: "Label",
+              description: "Text to display as label of the credits.",
+              icon: "i-mdi-format-title",
+              default: "",
+            }),
+            to: field({
+              type: "string",
+              title: "Link",
+              description: "URL of the credits link.",
+              icon: "i-mdi-link-variant",
+              default: "",
+            }),
+
+          },
         colorMode: field({
           type: 'boolean',
           title: 'Color Mode',

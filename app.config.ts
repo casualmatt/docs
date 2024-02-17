@@ -28,7 +28,11 @@ export default defineAppConfig({
     }]
   },
   footer: {
-    credits: 'Copyright © 2023',
+    credits: {
+      label: "Built with Nuxt UI Pro",
+      to: "https://ui.nuxt.com/pro",
+      target: '_blank'
+    },
     colorMode: false,
     links: [{
       icon: 'i-simple-icons-nuxtdotjs',
